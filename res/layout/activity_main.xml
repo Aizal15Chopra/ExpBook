@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/ExpenseSummary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Summary of Expenses          Total charge: $"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textAppearance="@color/black">
+
+        </TextView>
+
+
+        <ListView
+            android:id="@+id/expenseList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/AddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Add"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/DeleteExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/AddExpense"
+            android:text="Delete"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/EditExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/DeleteExpense"
+            android:layout_marginLeft="12dp"
+            android:text="Edit" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
